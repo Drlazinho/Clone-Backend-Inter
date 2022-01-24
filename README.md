@@ -26,3 +26,8 @@ Vai ser responsável por fazer a comunicação e o gerenciamento com o banco de 
 
 ##### Entity
 São entidades que serão conectadas ao banco de dados
+
+#### Routes
+Rotas de solicitações da aplicação
+- Criado rota para criação de  novos usuários
+- Criado rotas para entradas de usuários
