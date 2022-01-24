@@ -1,6 +1,8 @@
 import { Router } from "express";
+import { UserController } from "../resources/user/dtos/user.contollers";
 
 const userRouter = Router();
+const userController = new UserController()
 
 //GET - BUSCANDO DADOS
 //POST - CRIANDO DADOS
@@ -8,12 +10,7 @@ const userRouter = Router();
 //PATCH - ATUALIZAR DADOS - ATUALIZA APENAS UM PARTE
 //DELETE - DELETAR DADOS
 
-userRouter.post('/signin', (request, response) => {
-  return response.send('Entrando com o usuário')
-})
-
-userRouter.post('/signup', (request, response) => {
-  return response.send('Criando um usuário')
-})
+userRouter.post('/signin', userController.signin)
+userRouter.post('/signup', userController.signup)
 
 export default userRouter
